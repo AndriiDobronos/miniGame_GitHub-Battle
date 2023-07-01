@@ -1,0 +1,32 @@
+
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.loader span {
+  position: relative;
+  color: #000000;
+  font-size: 28px;
+  text-shadow: 3px 3px 3px grey;
+  font-weight: bold;
+}
+.loader span {
+  animation: wave 1.5s ease-in-out infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-24px);
+  }
+
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+}
