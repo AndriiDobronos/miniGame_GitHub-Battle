@@ -18,8 +18,13 @@ code {
 }
 
 a {
+  font-size: 30px;
   text-decoration: none;
   color: #d0021b;
+}
+
+a:hover {
+  text-shadow: 2px 2px 2px grey;
 }
 
 ul {
@@ -90,6 +95,10 @@ h1 {
   font-size: 20px;
   margin: 10px;
 }
+.popular-name {
+  font-size: 20px;
+  color: #d0021b;
+}
 
 .home-container {
   display: flex;
@@ -98,20 +107,21 @@ h1 {
 }
 
 .home-border {
-  width: 100vw;
-  height: 74vh;
-  margin-top: -7vh;
+  width: 70vw;
+  height: 70vh;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .home-picture {
-  margin-top: -218px;
-  width: 106vw;
-  margin-left: -3vw;
+  margin: -18vh auto 0 auto ;
+  width: 68vw;
 }
 
 .nav {
   display: flex;
+  justify-content: space-evenly ;
+
 }
 
 .nav li {
@@ -148,6 +158,38 @@ h1 {
   font-size: 30px;
   font-weight: 200;
 }
+div .battle {
+  margin-top: 20vh;
+}
+
+.move-boom {
+  /*animation-name: woosh;*/
+  animation-name:boom-circle;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  /*animation-timing-function: ease-out;*/
+  /*animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
+  animation-direction: alternate;
+}
+
+.move-left {
+  animation-name: move-left;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  /*animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
+  animation-direction: alternate;
+}
+
+.move-right {
+  animation-name: move-right;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  /*animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
+  animation-direction: alternate;
+}
 
 .header {
   text-align: center;
@@ -168,6 +210,7 @@ h1 {
 .reset:hover {
   cursor: pointer;
 }
+
 /***********************************************************/
 body {
   background: linear-gradient(to bottom right, #fff 0%,#fff 100%);
@@ -215,15 +258,17 @@ body {
 }
 
 .boom-container {
-  position: absolute;
+  /*position: absolute;*/
+  margin-right: -80px;
+  margin-left: 40px;
   display: flex;
   width: 80px;
   height: 80px;
   text-align: center;
   align-items: center;
-  transform: translateY(-50%);
-  left: 200px;
-  top: -145px;
+  /*transform: translateY(-50%);*/
+  /*left: 200px;*/
+  /*top: -145px;*/
 }
 .shape {
   display: inline-block;
@@ -238,7 +283,8 @@ body {
   transform-origin: 50% 80%;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
+  /*animation-iteration-count: infinite;*/
+  animation-iteration-count: 1;
   margin-left: -15px;
   border-width: 0 2.5px 5px 2.5px;
   border-color: transparent transparent #42e599 transparent;
@@ -259,7 +305,8 @@ body {
   animation-name: boom-disc;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
+  /*animation-iteration-count: infinite;*/
+  animation-iteration-count: 1;
 }
 
 .shape.circle {
@@ -268,7 +315,8 @@ body {
   animation-name: boom-circle;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
+  /*animation-iteration-count: infinite;*/
+  animation-iteration-count: 1;
   border-radius: 100%;
   margin-left: -30px;
 }
@@ -300,10 +348,48 @@ body {
   top: 155px;
 }
 .shape.triangle, .shape.circle, .shape.circle.big, .shape.disc {
-  animation-delay: 1.9s;
+  /*animation-delay: 1.9s;*/
+  animation-delay: .9s;
 }
 .shape.circle {
-  animation-delay: 2.15s;
+  /*animation-delay: 2.15s;*/
+  animation-delay: 1.15s;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translate(-400px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-200px, 0px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(120px, 0px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translate(400px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(200px, 0px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-120px, 0px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
 }
 
 @keyframes woosh {

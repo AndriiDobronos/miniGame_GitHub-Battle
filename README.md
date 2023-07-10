@@ -1,4 +1,9 @@
-# Getting Started with Create React AppCopy
+# GitHub battle is a mini-game built on the Create React App platform.
+### The Redux library andJavaScript and Typescript programming languages were also used to create it.
+### You can start the game by following the link: https://minigame-github-battle.netlify.app  ,or by doing the following steps after installing the code on your computer. 
+### The meaning of the game is to compare repositories for those selected by the name of their owners.
+### Comparison occurs by the number of subscribers and the total number of stars of all repositories.
+### Information about the content of the repository occurs directly in the game process using requests such as axios. Also on the Popular page you can get information about the thirty best repositories whose owners use a particular programming language.
 
 This project was bootstrapped with [Create React AppCopy](https://github.com/facebook/create-react-app).
 

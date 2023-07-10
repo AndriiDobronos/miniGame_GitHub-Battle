@@ -1,6 +1,7 @@
 import React from "react";
 import {
-    createBrowserRouter,
+//    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import Home from "../pages/Home/Home";
@@ -9,7 +10,8 @@ import Battle from "../pages/Battle/Battle";
 import Nav from "./Nav";
 import Results from "../pages/Battle/Results"
 
-const router = createBrowserRouter([
+//const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Nav />,

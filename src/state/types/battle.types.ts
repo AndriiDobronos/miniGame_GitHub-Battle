@@ -12,12 +12,14 @@ export interface IBattleStore {
     error: string | null,
     winner: string | null,
     loser: string | null,
+    battleIsFormed: boolean,
+    battleIsFormed2: boolean,
 }
 
 export interface IPlayerData {
     playerOneName: string ,
     playerTwoName: string ,
-    playerOneImage: string| null,
+    playerOneImage: string | null,
     playerTwoImage: string | null
 }
 

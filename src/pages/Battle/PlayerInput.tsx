@@ -1,5 +1,5 @@
 import {useState, memo, ReactElement, FC, FormEvent} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 //import {getUserName} from "../../state/battle/battle.action";
 //import {handleSubmit} from "../../state/battle/battle.action";
 import {getUserName} from "../../state/battle/battle.slice";
@@ -13,7 +13,7 @@ interface IProps {
 */
 const PlayerInput:FC = memo(():ReactElement => {
     const dispatch = useDispatch()
-
+    const battleIsFormed2 =useSelector((state) =>state.battle.battleIsFormed2)
     const [userName, setUserName] = useState<string>('')
 
     const handlerSubmit = (event:FormEvent):void => {
@@ -23,7 +23,7 @@ const PlayerInput:FC = memo(():ReactElement => {
     dispatch(getUserName(userName))
 
     return (
-        <form  className="column" onSubmit={handlerSubmit}>
+        <form  className="column move-left" onSubmit={handlerSubmit}>
             {/*<label htmlFor={label}>{label}</label>*/}
             <label htmlFor='Player 1'>Player 1</label>
             <input
@@ -33,6 +33,7 @@ const PlayerInput:FC = memo(():ReactElement => {
                 autoComplete='off'
                 value={userName}
                 onChange={(event) => setUserName(event.target.value)}
+                disabled={!battleIsFormed2}
             />
             <button
                 className="button"

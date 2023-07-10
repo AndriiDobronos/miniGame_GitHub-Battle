@@ -13,16 +13,15 @@ const PopularList:FC<IRepos> = (props:IRepos):ReactElement  => {
                                 <img src={repo.owner.avatar_url} alt="Avatar" className="avatar"/>
                             </li>
                             <li>
-                                <a href={repo.html_url} target='_blank' >{repo.name}</a>
+                                <a className='popular-name' href={repo.html_url} target='_blank' >{repo.name}</a>
                             </li>
-                            <li>@{repo.owner.login}</li>
+                            <li className='popular-name'>@{repo.owner.login}</li>
                             <li>{repo.stargazers_count} stars</li>
                         </ul>
                     </li>
                 )
             })}
         </ul>
-
     )
 }
 export default PopularList
